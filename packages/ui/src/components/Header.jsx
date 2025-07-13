@@ -7,7 +7,7 @@ const Header = () => {
       <Title title="Les jobs" />
       <Button 
         onClick={""}
-        className="font-[Work Sans] text-white bg-[#7650E0] rounded-[10px] font-medium text-lg px-4 py-2 gap-2"
+        className="text-white bg-[#7650E0] rounded-[10px] font-medium text-lg px-4 py-2 gap-2"
         content="Ajouter une offre"
       />
     </header>
