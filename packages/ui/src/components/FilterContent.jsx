@@ -6,14 +6,14 @@ import TagFilter from "./TagFilter";
 const filterOptions = {
   Poste: ["Dev Frontend", "Dev Backend", "Dev Fullstack", "Project / Product Management"],
   Contrat: ["CDI", "CDD", "Stage"],
-  Remote: ["Télétravail total", "Télétravail partiel", "Télétravail ponctuel", "Non spécifié"],
+  Télétravail: ["Télétravail total", "Télétravail partiel", "Télétravail ponctuel", "Non spécifié"],
 };
 
 const FilterContent = () => {
   const [selectedFilters, setSelectedFilters] = useState({
     Poste: [],
     Contrat: [],
-    Remote: []
+    Télétravail: []
   });
 
   const [openFilter, setOpenFilter] = useState(null);

@@ -18,7 +18,7 @@ const FilterDropdown = ({
   };
 
   return (
-    <div className="relative flex items-center justify-between w-[128px] h-[41px] rounded-[8px] px-3 py-2.5 bg-white shadow-md cursor-pointer">
+    <div className="relative flex items-center justify-between h-[41px] rounded-[8px] px-3 py-2.5 bg-white shadow-md cursor-pointer">
       <button 
         className="flex items-center gap-8 text-[#7650E0] font-semibold" 
         onClick={() => onToggle(theme)}
