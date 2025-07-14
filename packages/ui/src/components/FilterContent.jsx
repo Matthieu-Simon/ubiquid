@@ -16,6 +16,8 @@ const FilterContent = () => {
     Remote: []
   });
 
+  const [openFilter, setOpenFilter] = useState(null);
+
   const handleFilterChange = (category, value) => {
     setSelectedFilters((prev) => {
       const currentValues = prev[category];
@@ -28,6 +30,10 @@ const FilterContent = () => {
         [category]: updatedValues
       };
     });
+  };
+
+  const handleToggle = (filterName) => {
+    setOpenFilter(openFilter === filterName ? null : filterName);
   };
 
   const removeTag = (category, value) => {
@@ -48,6 +54,8 @@ const FilterContent = () => {
               options={options}
               selected={selectedFilters[category]}
               onChange={(value) => handleFilterChange(category, value)}
+              isOpen={openFilter === category}
+              onToggle={handleToggle}
             />
           ))}
         </div>
