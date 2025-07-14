@@ -4,9 +4,18 @@ import Separator from "../../public/separator.svg"
 const JobCard = ({ jobType, remoteType, companyName, location, contractType, salary, createdAt }) => {
 
   const formattedJob = (() => {
-    if (jobType === "manager") return "Manager";
-    const capitalized = jobType.charAt(0).toUpperCase() + jobType.slice(1);
-    return `Dev ${capitalized}`;
+    switch (jobType) {
+      case "manager":
+        return "Projet / Product Management";
+      case "back":
+        return "Dev Backend";
+      case "front":
+        return "Dev Frontend";
+      case "fullstack":
+        return "Dev Fullstack"
+      default:
+        return `Dev ${jobType.charAt(0).toUpperCase() + jobType.slice(1)}`;
+    }
   })();
 
   const formattedContract = (() => {
@@ -34,18 +43,18 @@ const JobCard = ({ jobType, remoteType, companyName, location, contractType, sal
 
   return (
     <div className="bg-white p-5 mb-4 flex justify-between items-center rounded-[10px]">
-      <div className="w-[384px] h-[76px] gap-6 flex items-center">
+      <div className="flex items-center gap-6">
         <div className="h-20 w-20 rounded-[6px] p-5 gap-2.5 bg-[#F1EEFC] text-center">
           <span className="text-[#7650E0] text-4xl font-semibold">{companyName[0]}</span>
         </div>
-        <div className="w-[350px] h-[62px] gap-2">
-          <div className="flex items-center gap-2.5">
-            <span className="font-medium text-lg text-[#0E0E2C] w-[119px]">
-            {formattedJob}
-            </span>
+        <div className="h-[62px] gap-2">
+          <div className="flex items-center gap-2.5 mb-2">
+            <span className="font-medium text-lg text-[#0E0E2C]">
+            {formattedJob}&nbsp;
             {remoteType && (
-              <span className={`w-[185px] rounded-xl px-2.5 py-2 text-center ${remoteStyle}`}>{formattedRemote}</span>
+              <span className={`rounded-xl px-2.5 py-2 text-center ${remoteStyle}`}>{formattedRemote}</span>
             )}
+            </span>
           </div>
           <div className="w-[265px] flex justify-between gap-2 text-lg text-[#505053]">
             <span>{companyName}</span> - <span>{location}</span>
@@ -54,7 +63,7 @@ const JobCard = ({ jobType, remoteType, companyName, location, contractType, sal
           </div>
         </div>
       </div>
-      <div className="w-[327px] flex items-center gap-28">
+      <div className="flex items-center gap-28">
         <div className="w-[110px] gap-3.5 flex flex-col">
           <span className="text-[#0E0E2C] text-lg w-16">
               Salaire&nbsp;
