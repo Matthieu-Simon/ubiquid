@@ -21,7 +21,7 @@ const JobContent = () => {
   if (isloading) return <p>Chargement...</p>;
 
   return (
-    <div className="py-5 mt-6">
+    <div className="py-5 mt-5">
       {jobs.map((job) => (
         <JobCard 
           key={job.id}

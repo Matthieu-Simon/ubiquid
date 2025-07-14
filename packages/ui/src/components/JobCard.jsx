@@ -70,10 +70,10 @@ const JobCard = ({ jobType, remoteType, companyName, location, contractType, sal
               <span className="text-[#7650E0] font-medium text-lg w-11">{formattedSalary}K</span>
           </span>
           
-          <span className="text-[#505053]">il y'a {daysAgo} jours</span>
+          <span className="text-[#505053]">il y a {daysAgo} jours</span>
         </div>
         <Button 
-          className="w-[105px] h-[38px] border border-[#7650E0] rounded-xl bg-[#E9E2FF] text-[#7650E0] font-medium text-lg gap-2"
+          className="w-[105px] h-[38px] border border-[#7650E0] rounded-xl bg-[#E9E2FF] text-[#7650E0] font-medium text-lg gap-2 cursor-pointer"
           content="Modifier"
         />
       </div>

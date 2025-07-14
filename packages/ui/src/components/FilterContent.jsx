@@ -62,7 +62,7 @@ const FilterContent = () => {
         <SortDropdown />
       </div>
 
-      <div className="flex flex-wrap gap-2 mt-2">
+      <div className="flex flex-wrap gap-2">
         {Object.entries(selectedFilters).flatMap(([category, values]) => values.map((value) => (
           <TagFilter 
             key={`${category}-${value}`}
