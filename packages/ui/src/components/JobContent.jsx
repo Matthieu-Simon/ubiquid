@@ -25,15 +25,13 @@ const JobContent = () => {
       {jobs.map((job) => (
         <JobCard 
           key={job.id}
-          jobType={job.jobType.match(/(fullstack|front|back)/i)
-        ? `Dev ${job.jobType}`
-        : job.jobType}
+          jobType={job.jobType}
           remoteType={job.remoteType}
           companyName={job.companyName}
           location={job.location}
           contractType={job.contractType}
-          salary={(job.salary / 1000).toFixed(1) + "K"}
-          duration={Math.floor((Date.now() - new Date(job.createdAt)) / (1000 * 60 * 60 * 24))}
+          salary={job.salary}
+          createdAt={job.createdAt}
         />
       ))}
     </div>
