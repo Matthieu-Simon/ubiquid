@@ -1,7 +1,7 @@
 import Button from "./Button";
 import Separator from "../../public/separator.svg"
 
-const JobCard = ({ job, remoteType, enterprise, location, contractType, salary, duration }) => {
+const JobCard = ({ jobType, remoteType, companyName, location, contractType, salary, duration }) => {
   return (
     <div className="bg-white p-5 mb-4 flex justify-between items-center rounded-[10px]">
       <div className="w-[384px] h-[76px] gap-6 flex items-center">
@@ -10,13 +10,23 @@ const JobCard = ({ job, remoteType, enterprise, location, contractType, salary, 
         </div>
         <div className="w-[284px] h-[62px] gap-2">
           <div className="flex items-center gap-2.5">
-            <span className="font-medium text-lg text-[#0E0E2C] w-[119px]">{job}</span>
-            <span className="bg-[#F1EEFC] text-[#7650E0] font-normal w-[155px] rounded-xl px-2.5 py-2">{remoteType}</span>
+            <span className="font-medium text-lg text-[#0E0E2C] w-[119px]">
+            {jobType}
+            </span>
+            {remoteType && (
+              <span className="bg-[#F1EEFC] text-[#7650E0] font-normal w-[155px] rounded-xl px-2.5 py-2">
+              {remoteType === "partial" ? "Télétravail partiel"
+                : remoteType === "full" ? "Télétravail total" : null
+              }
+              </span>
+            )}
           </div>
           <div className="w-[265px] flex justify-between gap-2 text-lg font-normal text-[#505053]">
-            <span>{enterprise}</span> - <span>{location}</span>
+            <span>{companyName}</span> - <span>{location}</span>
             <img src={Separator} alt="separator" className="w-20" /> 
-            <span className="text-lg font-normal">{contractType}</span>
+            <span className="text-lg font-normal">
+            {contractType === "stage" ? "Stage" : contractType?.toUpperCase()}
+            </span>
           </div>
         </div>
       </div>
@@ -24,7 +34,7 @@ const JobCard = ({ job, remoteType, enterprise, location, contractType, salary, 
         <div className="w-[110px] gap-3.5 flex flex-col">
           <span className="text-[#0E0E2C] text-lg font-normal w-16">
               Salaire
-              <span className="text-[#7650E0] font-medium text-lg w-11">{salary}K</span>
+              <span className="text-[#7650E0] font-medium text-lg w-11">{salary}</span>
           </span>
           
           <span className="text-[#505053]">il y'a {duration} jours</span>
