@@ -4,7 +4,7 @@ import JobContent from "./JobContent";
 
 const Content = () => {
   return (
-    <main className="w-[1340px] p-12 m-auto">
+    <main className="p-12 m-auto">
       <Header />
       <FilterContent />
       <JobContent />
