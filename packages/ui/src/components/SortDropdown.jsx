@@ -36,7 +36,7 @@ const SortDropdown = ({ onSortChange }) => {
               key={option.value}
               className="hover:text-[#7650E0] cursor-pointer text-left"
               onClick={() => handleSortSelect(option)}
-              content={option.label}
+              children={option.label}
             />
           ))}
         </div>

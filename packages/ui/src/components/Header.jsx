@@ -8,7 +8,7 @@ const Header = () => {
       <Button 
         onClick={""}
         className="text-white bg-[#7650E0] rounded-[10px] font-medium text-lg px-4 py-2 gap-2 cursor-pointer"
-        content="Ajouter une offre"
+        children="Ajouter une offre"
       />
     </header>
   )
