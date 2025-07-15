@@ -1,5 +1,5 @@
 import { JSONFilePreset } from "lowdb/node";
-import jobs from "./jobs.json";
+import jobs from "./jobs.json" with { type: "json" };
 
 const defaultData = { jobs: jobs };
 
