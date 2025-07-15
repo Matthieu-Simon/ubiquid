@@ -999,27 +999,6 @@
       "salary": 29482,
       "createdAt": "2025-02-03",
       "remoteType": "ponctual"
-    },
-    {
-      "id": 101,
-      "jobType": "DevOps",
-      "remoteType": "total",
-      "companyName": "Test",
-      "location": "Tokyo",
-      "contractType": "cdi",
-      "salary": 130000,
-      "createdAt": "2025-07-14T21:21:01.137Z"
-    },
-    {
-      "id": 102,
-      "jobType": "DevSecOps",
-      "remoteType": "total",
-      "companyName": "Tesla",
-      "location": "Paris",
-      "contractType": "cdd",
-      "salary": 30000,
-      "createdAt": "2025-07-14T21:36:03.509Z",
-      "updatedAt": "2025-07-15T16:21:35.319Z"
     }
   ]
 }
