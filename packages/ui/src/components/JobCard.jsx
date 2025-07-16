@@ -1,7 +1,7 @@
 import Button from "./Button";
 import Separator from "../../public/separator.svg"
 
-const JobCard = ({ jobType, remoteType, companyName, location, contractType, salary, createdAt }) => {
+const JobCard = ({ jobType, remoteType, companyName, location, contractType, salary, createdAt, onEdit }) => {
 
   const formattedJob = (() => {
     switch (jobType) {
@@ -73,6 +73,7 @@ const JobCard = ({ jobType, remoteType, companyName, location, contractType, sal
           <span className="text-[#505053]">il y a {daysAgo} jours</span>
         </div>
         <Button 
+          onClick={onEdit}
           className="w-[105px] h-[38px] border border-[#7650E0] rounded-xl bg-[#E9E2FF] text-[#7650E0] font-medium text-lg gap-2 cursor-pointer"
           children="Modifier"
         />

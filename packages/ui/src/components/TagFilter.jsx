@@ -1,4 +1,4 @@
-import Cross from "../../public/crossIcon.png";
+import Close from "../../public/crossIcon.svg";
 
 const TagFilter = ({ content, onRemove }) => {
   return (
@@ -6,7 +6,7 @@ const TagFilter = ({ content, onRemove }) => {
       {content}
       <div className="w-5 h-5 flex items-center justify-center bg-[#7650E0] rounded-full">
         <button className="cursor-pointer">
-          <img src={Cross} alt="close" onClick={onRemove} className="w-2 h-2" />
+          <img src={Close} alt="close" onClick={onRemove} />
         </button>
       </div>
     </div>
