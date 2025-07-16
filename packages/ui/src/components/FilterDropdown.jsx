@@ -21,7 +21,7 @@ const FilterDropdown = ({
 
   return (
     <div className="relative flex items-center justify-between h-[41px] rounded-[8px] px-3 py-2.5 bg-white shadow-md">
-      <Button className="flex items-center gap-8 text-[#7650E0] font-semibold" 
+      <Button className="flex items-center gap-8 text-[var(--color-primary)] font-semibold" 
         onClick={() => onToggle(theme)}>
         {theme}
         <img src={Arrow} alt="open" className="w-3.5 h-2 cursor-pointer" />
@@ -38,7 +38,7 @@ const FilterDropdown = ({
                 onChange={() => onChange(option)}
                 className="peer hidden"
               />
-              <span className="w-4 h-4 flex items-center justify-center border border-[#7650E0] rounded-sm bg-white peer-checked:bg-[#7650E0]">
+              <span className="w-4 h-4 flex items-center justify-center border border-[var(--color-primary)] rounded-sm bg-white peer-checked:bg-[var(--color-primary)]">
                 <img 
                   src={Check}
                   alt="check"

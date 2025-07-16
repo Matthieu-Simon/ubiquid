@@ -19,10 +19,10 @@ const SortDropdown = ({ onSortChange }) => {
 
   return (
     <div className="relative flex items-center gap-2">
-      <span className="text-[#0E0E2C]">Trier par :</span>
+      <span className="text-[var(--color-secondary)]">Trier par :</span>
 
       <div 
-        className="flex items-center gap-2 text-[#7650E0] cursor-pointer"
+        className="flex items-center gap-2 text-[var(--color-primary)] cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="font-semibold">{selectedSort}</span>
@@ -34,7 +34,7 @@ const SortDropdown = ({ onSortChange }) => {
           {sortOptions.map((option) => (
             <Button 
               key={option.value}
-              className="hover:text-[#7650E0] cursor-pointer text-left"
+              className="hover:text-[var(--color-primary)] cursor-pointer text-left"
               onClick={() => handleSortSelect(option)}
               children={option.label}
             />

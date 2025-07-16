@@ -4,20 +4,20 @@ import Arrow from "../../public/arrow.svg";
 
 const JobModal = ({ onClose }) => {
   return (
-    <div className="w-[920px] m-auto bg-white shadow-2xl rounded-2xl px-8 py-10 flex flex-col justify-between">
+    <div className="w-[920px] m-auto bg-white shadow-modal rounded-2xl px-8 py-10 flex flex-col justify-between">
       <div>
         <div className="relative m-4">
-          <h2 className="text-center font-medium text-2xl text-[#0E0E2C]">
+          <h2 className="text-center font-medium text-2xl text-[var(--color-secondary)]">
             Modifier une offre d'emploi
           </h2>
           <Button 
             onClick={onClose}
-            className="bg-[#7650E0] p-1 rounded-full absolute top-0 right-0 cursor-pointer" 
+            className="bg-[var(--color-primary)] p-1 rounded-full absolute top-0 right-0 cursor-pointer" 
             children={<img src={Close} alt="close" />}
           />
         </div>
         
-        <form className="flex flex-col text-[#0E0E2C] gap-4">
+        <form className="flex flex-col text-[var(--color-secondary)] gap-4">
           <div className="flex flex-col gap-2.5">
             <label htmlFor="jobType" className="text-lg">
               Nom du poste
@@ -26,7 +26,7 @@ const JobModal = ({ onClose }) => {
               <select 
                 id="jobType"
                 name="jobType"
-                className="rounded-lg px-4 py-2.5 border border-[#7650E0] text-[#0E0E2C] appearance-none w-full cursor-pointer"
+                className="rounded-lg px-4 py-2.5 border border-[var(--color-primary)] text-[var(--color-secondary)] appearance-none w-full cursor-pointer"
                 required
               >
                 <option value="fullstack">Dev Fullstack</option>
@@ -49,7 +49,7 @@ const JobModal = ({ onClose }) => {
               id="companyName"
               name="companyName"
               placeholder="Entreprise"
-              className="rounded-lg px-4 py-2.5 border border-[#7650E0] text-[#0E0E2C] placeholder-[#0E0E2C]"
+              className="rounded-lg px-4 py-2.5 border border-[var(--color-primary)] text-[var(--color-secondary)] placeholder-[var(--color-secondary)]"
               required
             />
           </div>
@@ -60,7 +60,7 @@ const JobModal = ({ onClose }) => {
               id="location"
               name="location"
               placeholder="Ville"
-              className="rounded-lg px-4 py-2.5 border border-[#7650E0] text-[#0E0E2C] placeholder-[#0E0E2C]"
+              className="rounded-lg px-4 py-2.5 border border-[var(--color-primary)] text-[var(--color-secondary)] placeholder-[var(--color-secondary)]"
               required
             />
           </div>
@@ -72,7 +72,7 @@ const JobModal = ({ onClose }) => {
               <select 
                 id="contractType"
                 name="contractType"
-                className="rounded-lg px-4 py-2.5 border border-[#7650E0] text-[#0E0E2C] appearance-none w-full cursor-pointer"
+                className="rounded-lg px-4 py-2.5 border border-[var(--color-primary)] text-[var(--color-secondary)] appearance-none w-full cursor-pointer"
                 required
               >
                 <option value="cdi">CDI</option>
@@ -93,7 +93,7 @@ const JobModal = ({ onClose }) => {
               id="salary"
               name="salary"
               placeholder="Salaire"
-              className="rounded-lg px-4 py-2.5 border border-[#7650E0] text-[#0E0E2C] placeholder-[#0E0E2C]"
+              className="rounded-lg px-4 py-2.5 border border-[var(--color-primary)] text-[var(--color-secondary)] placeholder-[var(--color-secondary)]"
               required
             />
           </div>
@@ -103,7 +103,7 @@ const JobModal = ({ onClose }) => {
               <select 
                 id="remoteType"
                 name="remoteType" 
-                className="rounded-lg px-4 py-2.5 border border-[#7650E0] text-[#0E0E2C] appearance-none w-full cursor-pointer"
+                className="rounded-lg px-4 py-2.5 border border-[var(--color-primary)] text-[var(--color-secondary)] appearance-none w-full cursor-pointer"
                 required
               >
                 <option value="fullRemote">Télétravail total</option>
@@ -123,14 +123,14 @@ const JobModal = ({ onClose }) => {
             <div className="absolute left-0 top-0">
               <Button 
                 children="Supprimer"
-                className="text-[#FC573B] font-medium text-lg cursor-pointer"
+                className="text-[#FC573B] font-medium text-lg cursor-pointer hover:bg-[#FC573B] hover:text-white rounded-xl px-2 py-2 "
               />
             </div>
             
             <div className="mx-auto w-fit">
               <Button 
                 children="Enregistrer l'annonce"
-                className="bg-[#7650E0] text-white w-[219px] h-[38px] rounded-xl px-4 py-2 gap-2 shadow-[0px_4px_13px_0px_#43434333] cursor-pointer"
+                className="bg-[var(--color-primary)] hover:bg-[#8661EC] text-white w-[219px] h-[38px] rounded-xl px-4 py-2 gap-2 shadow-button cursor-pointer"
               />
             </div>
             

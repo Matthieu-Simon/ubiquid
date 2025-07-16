@@ -23,7 +23,7 @@ const JobContent = () => {
 
   return (
     <div className="py-5 mt-5">
-      <JobModal />
+    <JobModal />
       {/* {jobs.map((job) => (
         <JobCard 
           key={job.id}
