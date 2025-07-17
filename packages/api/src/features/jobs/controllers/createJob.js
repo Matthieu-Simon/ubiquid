@@ -1,9 +1,8 @@
 import { db } from "../../../../db/db.js";
 
-export const createJob = (req, res) => {
+export const createJob = async (req, res) => {
   try {
     const { jobType, remoteType, companyName, contractType, location, salary } = req.body;
-
     if(!jobType || !companyName || !location || !contractType || !salary || !remoteType) {
       return res.status(400).json({
         message: "Tous les champs doivent être remplis !"
@@ -26,7 +25,7 @@ export const createJob = (req, res) => {
 
     db.data.jobs.push(newJob);
 
-    db.write();
+    await db.write();
 
     res.status(201).json({
       message: "Annonce créée avec succés",

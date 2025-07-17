@@ -29,9 +29,9 @@ const JobCard = ({ jobType, remoteType, companyName, location, contractType, sal
       case "partial":
         return { formattedRemote: "Télétravail partiel", remoteStyle: "bg-[#F1EEFC] text-[var(--color-primary)]"};
       case "fullRemote":
-        return { formattedRemote: "Télétravail partiel", remoteStyle: "bg-[#E5F3FE] text-[#0074FF]"}
+        return { formattedRemote: "Télétravail total", remoteStyle: "bg-[#E5F3FE] text-[#0074FF]"}
       case "ponctual":
-        return { formattedRemote: "Télétravail partiel", remoteStyle: "bg-[#FFF8E5] text-[#F0BA1C]"}
+        return { formattedRemote: "Télétravail ponctuel", remoteStyle: "bg-[#FFF8E5] text-[#F0BA1C]"}
       default:
         return { formattedRemote: "null", remoteStyle: ""}
     }
