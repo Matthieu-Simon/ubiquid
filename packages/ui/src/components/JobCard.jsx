@@ -1,7 +1,7 @@
 import Button from "./Button";
 import Separator from "../../public/separator.svg"
 
-const JobCard = ({ jobType, remoteType, companyName, location, contractType, salary, createdAt }) => {
+const JobCard = ({ jobType, remoteType, companyName, location, contractType, salary, createdAt, onEdit }) => {
 
   const formattedJob = (() => {
     switch (jobType) {
@@ -27,7 +27,7 @@ const JobCard = ({ jobType, remoteType, companyName, location, contractType, sal
   const { formattedRemote, remoteStyle } = (() => {
     switch (remoteType) {
       case "partial":
-        return { formattedRemote: "Télétravail partiel", remoteStyle: "bg-[#F1EEFC] text-[#7650E0]"};
+        return { formattedRemote: "Télétravail partiel", remoteStyle: "bg-[#F1EEFC] text-[var(--color-primary)]"};
       case "fullRemote":
         return { formattedRemote: "Télétravail partiel", remoteStyle: "bg-[#E5F3FE] text-[#0074FF]"}
       case "ponctual":
@@ -45,11 +45,11 @@ const JobCard = ({ jobType, remoteType, companyName, location, contractType, sal
     <div className="bg-white p-5 mb-4 flex justify-between items-center rounded-[10px]">
       <div className="flex items-center gap-6">
         <div className="h-20 w-20 rounded-[6px] p-5 gap-2.5 bg-[#F1EEFC] text-center">
-          <span className="text-[#7650E0] text-4xl font-semibold">{companyName[0]}</span>
+          <span className="text-[var(--color-primary)] text-4xl font-semibold">{companyName[0]}</span>
         </div>
         <div className="h-[62px] gap-2">
           <div className="flex items-center gap-2.5 mb-2">
-            <span className="font-medium text-lg text-[#0E0E2C]">
+            <span className="font-medium text-lg text-[var(--color-secondary)]">
             {formattedJob}&nbsp;
             {remoteType && (
               <span className={`rounded-xl px-2.5 py-2 text-center ${remoteStyle}`}>{formattedRemote}</span>
@@ -64,17 +64,17 @@ const JobCard = ({ jobType, remoteType, companyName, location, contractType, sal
         </div>
       </div>
       <div className="flex items-center gap-28">
-        <div className="w-[110px] gap-3.5 flex flex-col">
+        <div className="gap-3.5 flex flex-col">
           <span className="text-[#0E0E2C] text-lg w-16">
               Salaire&nbsp;
-              <span className="text-[#7650E0] font-medium text-lg w-11">{formattedSalary}K</span>
+              <span className="text-[var(--color-primary)] font-medium text-lg w-11">{formattedSalary}K</span>
           </span>
-          
           <span className="text-[#505053]">il y a {daysAgo} jours</span>
         </div>
         <Button 
-          className="w-[105px] h-[38px] border border-[#7650E0] rounded-xl bg-[#E9E2FF] text-[#7650E0] font-medium text-lg gap-2 cursor-pointer"
-          content="Modifier"
+          onClick={onEdit}
+          className="w-[105px] h-[38px] border border-[var(--color-primary)] rounded-xl hover:bg-[#E9E2FF] bg-white text-[var(--color-primary)] font-medium text-lg gap-2 cursor-pointer"
+          children="Modifier"
         />
       </div>
     </div>

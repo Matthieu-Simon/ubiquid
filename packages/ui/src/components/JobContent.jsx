@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import JobCard from "./JobCard"
+import JobCard from "./JobCard";
 
-const JobContent = () => {
+const JobContent = ({ onEditJob }) => {
   const [jobs, setJobs] = useState([]);
   const [isloading, setIsLoading] = useState(true);
 
@@ -32,6 +32,7 @@ const JobContent = () => {
           contractType={job.contractType}
           salary={job.salary}
           createdAt={job.createdAt}
+          onEdit={onEditJob}
         />
       ))}
     </div>

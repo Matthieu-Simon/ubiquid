@@ -1,7 +1,10 @@
-const Button = ({ onClick, className, content }) => {
+const Button = ({ onClick, className, children }) => {
   return (
-    <button onClick={onClick} className={className}>
-      {content}
+    <button 
+      onClick={onClick} 
+      className={`transition-all duration-200 ease-in-out ${className}`}
+    >
+      {children}
     </button>
   )
 }
