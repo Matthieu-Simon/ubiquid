@@ -1,54 +1,15 @@
 {
   "jobs": [
     {
-      "id": 1,
-      "companyName": "CyberNest",
-      "jobType": "manager",
-      "contractType": "cdd",
-      "location": "Montpellier",
-      "salary": 38681,
-      "createdAt": "2025-01-28",
-      "remoteType": "partial"
-    },
-    {
-      "id": 2,
-      "companyName": "TechNova",
-      "jobType": "fullstack",
-      "contractType": "cdd",
-      "location": "Nice",
-      "salary": 31639,
-      "createdAt": "2025-01-15",
-      "remoteType": "fullRemote"
-    },
-    {
-      "id": 3,
-      "companyName": "TechNova",
-      "jobType": "back",
-      "contractType": "stage",
-      "location": "Toulouse",
-      "salary": 38286,
-      "createdAt": "2025-01-11",
-      "remoteType": "partial"
-    },
-    {
-      "id": 4,
-      "companyName": "SmartApps",
-      "jobType": "front",
-      "contractType": "cdd",
-      "location": "Toulouse",
-      "salary": 35638,
-      "createdAt": "2025-05-08",
-      "remoteType": null
-    },
-    {
       "id": 5,
       "companyName": "CyberNest",
-      "jobType": "back",
-      "contractType": "stage",
-      "location": "Nantes",
-      "salary": 36985,
+      "jobType": "fullstack",
+      "contractType": "cdi",
+      "location": "Lille",
+      "salary": "45000",
       "createdAt": "2025-06-08",
-      "remoteType": "partial"
+      "remoteType": "partial",
+      "updatedAt": "2025-07-17T14:43:34.662Z"
     },
     {
       "id": 6,
@@ -269,16 +230,6 @@
       "salary": 21490,
       "createdAt": "2025-02-28",
       "remoteType": "fullRemote"
-    },
-    {
-      "id": 28,
-      "companyName": "QuantumSoft",
-      "jobType": "manager",
-      "contractType": "cdi",
-      "location": "Strasbourg",
-      "salary": 27987,
-      "createdAt": "2025-04-09",
-      "remoteType": null
     },
     {
       "id": 29,
@@ -999,6 +950,26 @@
       "salary": 29482,
       "createdAt": "2025-02-03",
       "remoteType": "ponctual"
+    },
+    {
+      "id": 101,
+      "jobType": "fullstack",
+      "remoteType": "partial",
+      "companyName": "CyberNest",
+      "location": "Lille",
+      "contractType": "cdi",
+      "salary": 45000,
+      "createdAt": "2025-07-17T14:53:41.010Z"
+    },
+    {
+      "id": 102,
+      "jobType": "front",
+      "remoteType": "fullRemote",
+      "companyName": "Ubiquid",
+      "location": "Paris",
+      "contractType": "cdd",
+      "salary": 12000,
+      "createdAt": "2025-07-17T15:00:10.366Z"
     }
   ]
 }
