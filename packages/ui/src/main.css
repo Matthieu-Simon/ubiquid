@@ -15,7 +15,7 @@ body {
 }
 
 .shadow-modal {
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-modal);
 }
 
 .shadow-button {

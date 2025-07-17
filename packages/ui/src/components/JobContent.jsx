@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import JobCard from "./JobCard";
-import JobModal from "./JobModal";
 
-const JobContent = () => {
+const JobContent = ({ onEditJob }) => {
   const [jobs, setJobs] = useState([]);
   const [isloading, setIsLoading] = useState(true);
 
@@ -23,8 +22,7 @@ const JobContent = () => {
 
   return (
     <div className="py-5 mt-5">
-    <JobModal />
-      {/* {jobs.map((job) => (
+      {jobs.map((job) => (
         <JobCard 
           key={job.id}
           jobType={job.jobType}
@@ -34,8 +32,9 @@ const JobContent = () => {
           contractType={job.contractType}
           salary={job.salary}
           createdAt={job.createdAt}
+          onEdit={onEditJob}
         />
-      ))} */}
+      ))}
     </div>
   )
 }
